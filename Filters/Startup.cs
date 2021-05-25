@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Filters.Utils;
 
 namespace Filters
 {
@@ -24,6 +25,10 @@ namespace Filters
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            /*services.AddRazorPages().AddMvcOptions(options => 
+            { 
+                options.Filters.Add(new CustomPageFilter(Configuration)); 
+            });*/
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
